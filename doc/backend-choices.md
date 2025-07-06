@@ -70,6 +70,7 @@ Your backend will need to handle:
   </span><span>familyId</span><span>: </span><span>string</span><span>
   </span><span>bounty</span><span>: </span><span>boolean</span><span>
   </span><span>points</span><span>: </span><span>number</span><span>
+  </span><span>dueDate</span><span>: </span><span>Date</span><span>
   </span><span>status</span><span>: </span><span>'pending'</span><span> | </span><span>'submitted'</span><span> | </span><span>'approved'</span><span> | </span><span>'rejected'</span><span>
   proofPhotoUrl?: </span><span>string</span><span>
 }
