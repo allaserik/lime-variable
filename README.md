@@ -20,13 +20,16 @@ https://lime-variables.vercel.app/
 
 ### Backend
 
+* Node
 * NestJS
+* TypeScript
 * PostgreSQL
 * Prisma
-* TypeScript
+* RESTful Api
 * Passport-JWT authentication
 * Swagger
 * Docker
+* GraphQL Playground
 
 ### Contributors
 
