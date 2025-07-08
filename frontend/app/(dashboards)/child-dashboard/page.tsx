@@ -41,7 +41,7 @@ export default function ChildDashboard() {
           </div>
           <div className="flex items-center space-x-4">
             <div className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold">
-              ⭐ 0 Points
+              ⭐ {currentUser.points ?? 0} Points
             </div>
             <button
               onClick={handleLogout}
