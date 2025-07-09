@@ -6,7 +6,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors();
-  await app.listen(process.env.PORT ?? 3001);
 
   const config = new DocumentBuilder()
     .setTitle('Cats example')
