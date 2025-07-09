@@ -5,11 +5,11 @@
 
 This is extremly simple flow.
 
-
 # Data Modesl
 
-### User 
-```
+### User
+
+```ts
 User {
   id: string (UUID) // PK
   name: string
@@ -28,8 +28,10 @@ User {
   rewardsRequested: RewardRedemption[]
 }
 ```
+
 ### Chore
-```
+
+```ts
 Chore {
   id: string (UUID) // PK
   title: string
@@ -49,8 +51,10 @@ Chore {
   assignedBy: User
 }
 ```  
+
 ### Reward
-```
+
+```ts
 Reward {
   id: string (UUID) // PK
   name: string
@@ -65,8 +69,10 @@ Reward {
   redemptions: RewardRedemption[]
 }
 ```
+
 ### RewardRedemption
-```
+
+```ts
 RewardRedemption {
   id: string (UUID) // PK
   rewardId: string // FK → Reward
@@ -82,8 +88,10 @@ RewardRedemption {
   approvedBy: User | null
 }
 ```
+
 ### Badge (optional)
-```
+
+```ts
 Badge {
   id: string (UUID) // PK
   name: string
@@ -92,8 +100,10 @@ Badge {
   condition: string // logic to determine when earned
 }
 ```
+
 ### UserBadge (optional)
-```
+
+```ts
 UserBadge {
   id: string (UUID)
   userId: string // FK → User
