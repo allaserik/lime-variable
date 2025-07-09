@@ -44,6 +44,10 @@ $ pnpm run start:dev
 $ pnpm run start:prod
 ```
 
+## Api Documentation
+
+Access the Swagger UI at `http://localhost:3000/api`.
+
 ## Run tests
 
 ```bash
