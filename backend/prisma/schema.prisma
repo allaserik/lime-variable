@@ -35,20 +35,19 @@ model Family {
 // Family -> Users (one-to-many)
 
 model User {
-  id        String   @id @default(uuid()) @db.Uuid
-  name      String?
-  email     String   @unique
-  password  String
-  role      UserRole
-  parentId  String?
-  points    Int
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  family    Family   @relation(fields: [familyId], references: [id])
-  familyId  String
-  Chore     Chore[]
-  Chore     Chore[]
-  Chore     Chore[]
+  id             String   @id @default(uuid()) @db.Uuid
+  name           String?
+  email          String   @unique
+  password       String
+  role           UserRole
+  points         Int
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  family         Family   @relation(fields: [familyId], references: [id])
+  familyId       String
+  createdChores  Chore[]  @relation("CreatedByUser")
+  assignedChores Chore[]  @relation("AssignedByUser")
+  myChores       Chore[]  @relation("AssignedToUser")
 
   @@map("users")
 }
@@ -67,18 +66,17 @@ model Chore {
   updatedAt     DateTime    @updatedAt
   proofPhotoUrl String?
 
-  createdBy  String //Parent ID  (who created it)
-  assignedBy String // Parent ID  (who assigned it)
-  assignedTo String? // Child ID or Parent ID :(who does it) As parent can assign Chore to him/her self
-  // when assignedTo id null it is bounty
+  createdBy  String  @db.Uuid
+  assignedBy String  @db.Uuid
+  assignedTo String? @db.Uuid
 
   submittedAt DateTime?
   approvedAt  DateTime?
   rejectedAt  DateTime?
 
-  createdByUser  User @relation("CreatedByUser", fields: [createdBy], references: [id])
-  assignedByUser User @relation("AssignedByUser", fields: [assignedBy], references: [id])
-  assignedToUser User @relation("AssignedToUser", fields: [assignedTo], references: [id])
+  createdByUser  User  @relation("CreatedByUser", fields: [createdBy], references: [id])
+  assignedByUser User  @relation("AssignedByUser", fields: [assignedBy], references: [id])
+  assignedToUser User? @relation("AssignedToUser", fields: [assignedTo], references: [id])
 
   @@map("chores")
 }
