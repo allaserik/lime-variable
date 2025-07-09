@@ -9,7 +9,7 @@ To ease working with usernames, do provide your username in discord channel as <
 
 Document your ideas, issues, bugs in Github Issues.
 
-**Naming**
+#### Naming
 
 - `FE-bug: The main logo is 2pixels to the left`
 - `Docs: Update the data-desgn doc to relect the current databse situation`
@@ -130,7 +130,6 @@ git push origin feature/your-feature-name
 
 - `FE-feature: Modal Functionality`
 - `Docs: Update git-workflow`
-
 
 ### 6. Handle Code Review
 
