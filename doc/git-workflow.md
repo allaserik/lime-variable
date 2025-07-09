@@ -1,5 +1,19 @@
 # Git Workflow for Team Collaboration
 
+## 🗫 Communication
+
+Main communication channel is Discord.
+To ease working with usernames, do provide your username in discord channel as <username> / <githubUsername>
+
+### Reporting issues
+
+Document your ideas, issues, bugs in Github Issues.
+
+**Naming**
+
+- `FE-bug: The main logo is 2pixels to the left`
+- `Docs: Update the data-desgn doc to relect the current databse situation`
+
 ## Before You Start
 
 ### 1. **Clone the project** (first time only)
@@ -111,6 +125,12 @@ git push origin feature/your-feature-name
 3. Choose: `your-branch` → `main`
 4. Add description of what you changed
 5. Request reviewers (teammates)
+
+#### 5.1. Naming Pull Requests
+
+- `FE-feature: Modal Functionality`
+- `Docs: Update git-workflow`
+
 
 ### 6. Handle Code Review
 
