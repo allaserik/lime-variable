@@ -16,30 +16,30 @@ Document your ideas, issues, bugs in Github Issues.
 
 ## Before You Start
 
-### 1. **Clone the project** (first time only)
+1. **Clone the project** (first time only)
 
-```bash
-git clone https://github.com/freeCodeCamp-2025-Summer-Hackathon/lime-variable.git
-```
+    ```bash
+    git clone https://github.com/freeCodeCamp-2025-Summer-Hackathon/lime-variable.git
+    ```
 
-or
+    or
 
-```bash
-git clone git@github.com:freeCodeCamp-2025-Summer-Hackathon/lime-variable.git
-```
+    ```bash
+    git clone git@github.com:freeCodeCamp-2025-Summer-Hackathon/lime-variable.git
+    ```
 
-then
+    then
 
-```bash
-cd lime-variable
-```
+    ```bash
+    cd lime-variable
+    ```
 
-### 2. **Always start with the latest code**
+2. **Always start with the latest code**
 
-```bash
-git checkout main
-git pull origin main
-```
+    ```bash
+    git checkout main
+    git pull origin main
+    ```
 
 ## Daily Workflow
 
