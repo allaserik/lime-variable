@@ -2,6 +2,7 @@ name: Bug Report
 description: Report a reproducible bug in the application.
 title: "[Bug] "
 labels: ["type: bug", "triage"]
+projects: ["Frontend", "Backend"]
 assignees: []
 
 body:
