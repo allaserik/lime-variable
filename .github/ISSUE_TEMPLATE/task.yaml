@@ -1,0 +1,52 @@
+name: Task
+description: Log a task that needs to be completed.
+title: "[Task] "
+labels: ["type: task"]
+projects: ["Frontend", "Backend"]
+
+assignees: 'SampleAssignee'
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a task for things like refactoring, configuration, or setup. Not for bugs or features.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Task Summary
+      placeholder: "e.g., Set up staging environment"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Task Details
+      description: What exactly needs to be done?
+      placeholder: |
+        - Set up Firebase project
+        - Configure staging DB
+        - Add `.env.staging` file
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High – blocks other work
+        - Medium – must be done soon
+        - Low – whenever possible
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This is not a bug or feature request.
+          required: true
