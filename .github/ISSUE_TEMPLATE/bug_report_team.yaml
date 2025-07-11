@@ -1,0 +1,79 @@
+name: Team Bug Report
+description: For internal teams to report bugs with more technical details.
+title: "[Team Bug] "
+labels: ["type: bug", "from: team", "triage"]
+assignees:
+  - SampleAssignee
+
+body:
+  - type: input
+    id: reporter
+    attributes:
+      label: Reporter
+      description: Who is reporting this bug?
+      placeholder: "e.g., stbs(backend)"
+    validations:
+      required: true
+
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical – blocks functionality or deployment
+        - Major – impacts primary functionality
+        - Minor – UI/UX or non-blocking issues
+        - Low – cosmetic or trivial
+    validations:
+      required: true
+
+  - type: input
+    id: component
+    attributes:
+      label: Affected Component
+      placeholder: "e.g., Login page, API: /auth/login"
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Clear steps for reproducing the bug.
+      placeholder: |
+        1. Open...
+        2. Click...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      placeholder: "Describe what should have happened"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      placeholder: "Describe what actually happened"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Logs, screenshots, test case IDs, links to Slack or Notion, etc.
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Checklist
+      options:
+        - label: I confirmed this bug is not a duplicate.
+          required: true
+        - label: The bug is reproducible on the latest version.
+          required: true
