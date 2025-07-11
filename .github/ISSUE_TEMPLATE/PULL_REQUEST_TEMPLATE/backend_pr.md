@@ -8,8 +8,8 @@ Briefly describe what you changed or added.
 
 - [ ] Swagger
 - [ ] Postman
-- [ ] Unit tests
-- [ ] Manual test
+- [ ] Integration test
+- [ ] E2E test
 
 ---
 
@@ -24,6 +24,7 @@ List key files or modules you worked on.
 - [ ] Code runs without errors
 - [ ] Validation is used (DTOs)
 - [ ] Swagger is updated
+- [ ] Add the correct labels to the pull request
 - [ ] No console logs or debug code
 
 ---
