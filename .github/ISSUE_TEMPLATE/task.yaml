@@ -1,6 +1,6 @@
 name: Task
 description: Log a task that needs to be completed.
-title: "[Task] "
+title: "<REPLACE: [Frontend] or [Backend]>-[TASK] Your Title Here""
 labels: ["type: task"]
 projects: ["Frontend", "Backend"]
 
