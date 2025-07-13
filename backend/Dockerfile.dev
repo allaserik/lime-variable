@@ -1,0 +1,18 @@
+FROM node:18-alpine AS development
+
+WORKDIR /app
+
+RUN npm install -g pnpm
+
+COPY package*.json ./
+COPY prisma ./prisma
+
+RUN pnpm install
+
+RUN pnpm prisma generate
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["pnpm", "run", "start"]
