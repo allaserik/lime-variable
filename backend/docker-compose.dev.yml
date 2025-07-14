@@ -18,8 +18,7 @@ services:
     command: >
       sh -c "pnpm prisma migrate deploy &&
              pnpm prisma generate &&
-             pnpm run seed &&
-             pnpm run start"
+             pnpm run start:dev"
 
   postgres:
     image: postgres:15
