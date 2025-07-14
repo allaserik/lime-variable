@@ -61,6 +61,37 @@ $ pnpm run test:e2e
 $ pnpm run test:cov
 ```
 
+## Docker & Database Setup
+
+This project uses Docker Compose to run a local PostgreSQL database for development.
+
+### Start PostgreSQL with Docker Compose
+
+1. Make sure you have [Docker](https://www.docker.com/products/docker-desktop/) installed and running.
+2. In the `backend` directory, run:
+
+   ```bash
+   docker compose up -d
+   ```
+
+   This will start a PostgreSQL database on port 5431 (host) mapped to 5432 (container).
+
+3. The database will be initialized using the `init-db.sql` script if present.
+
+### Connect the Backend to the Database
+
+Set the following environment variable in your `.env` file (or your deployment environment):
+
+.env.{mode}
+
+```bash
+DATABASE_URL="postgresql://<user>:<password>@localhost:<port>/<database>"
+```
+
+You can now run migrations and start the backend as usual.
+
+---
+
 ## Deployment
 
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
