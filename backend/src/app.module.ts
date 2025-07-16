@@ -8,7 +8,10 @@ import { FamiliesModule } from './families/families.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env' }),
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: `.env.${process.env.NODE_ENV}`,
+    }),
     PrismaModule,
     AuthModule,
     FamiliesModule,
